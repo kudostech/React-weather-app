@@ -3,6 +3,8 @@
 A simple and beautiful Weather Application built with React.js and the OpenWeather API.
 The app allows users to search for the current weather in any city and displays the temperature, weather condition, and the date with a dynamic background that changes based on the temperature.
 
+---
+
 ## 🚀 Features
 
 🌍 Search for real-time weather data by city name
@@ -16,7 +18,7 @@ The app allows users to search for the current weather in any city and displays 
 ⚡ Instant weather updates with Enter key
 
 💻 Fully responsive and simple UI
-
+---
 ## 🧰 Tech Stack
 
 React.js ⚛️
@@ -54,7 +56,7 @@ When the Enter key is pressed, the app triggers the search function.
 
 It calls the OpenWeather API with the provided city name.
 
-The app displays:
+### The app displays:
 
 City name and country
 
@@ -74,12 +76,12 @@ Go to OpenWeather API
 Generate your API key.
 
 Replace the placeholder in App.jsx:
-
+```
 const api = {
   key: "YOUR_API_KEY",
   base: "https://api.openweathermap.org/data/2.5/"
 };
-
+```
 ## 🛠️ Installation & Setup
 
 Clone the repository
