@@ -1,16 +1,160 @@
-# React + Vite
+# 🌦️ React Weather-App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and beautiful Weather Application built with React.js and the OpenWeather API.
+The app allows users to search for the current weather in any city and displays the temperature, weather condition, and the date with a dynamic background that changes based on the temperature.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🌍 Search for real-time weather data by city name
 
-## React Compiler
+🌡️ Displays temperature in °C and current weather condition
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🕒 Shows current date and day dynamically
 
-## Expanding the ESLint configuration
+🌤️ Background image changes depending on the temperature (warm or cold)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+⚡ Instant weather updates with Enter key
+
+💻 Fully responsive and simple UI
+
+## 🧰 Tech Stack
+
+React.js ⚛️
+
+OpenWeather API 🌦️
+
+CSS / TailwindCSS 💅
+
+JavaScript (ES6+)
+
+```
+📂 Project Structure
+weather-app/
+│
+├── public/
+│   └── index.html
+│
+├── src/
+│   ├── assets/
+│   │   ├── cold-bg.jpg
+│   │   └── warm-bg.jpg
+│   ├── App.jsx
+│   ├── App.css
+│   └── main.jsx
+│
+├── package.json
+├── vite.config.js
+└── README.md
+```
+## 🧭 How It Works
+
+User types a city name in the input field.
+
+When the Enter key is pressed, the app triggers the search function.
+
+It calls the OpenWeather API with the provided city name.
+
+The app displays:
+
+City name and country
+
+Current temperature (in °C)
+
+Weather condition (e.g., Clear, Clouds, Rain)
+
+Current date
+
+If the temperature is above 16°C, the background changes to a warm image. Otherwise, a cold image is shown.
+
+## 🔑 API Setup
+
+Go to OpenWeather API
+ and create a free account.
+
+Generate your API key.
+
+Replace the placeholder in App.jsx:
+
+const api = {
+  key: "YOUR_API_KEY",
+  base: "https://api.openweathermap.org/data/2.5/"
+};
+
+## 🛠️ Installation & Setup
+
+Clone the repository
+
+git clone https://github.com/your-username/weather-app.git
+
+
+Navigate to the project folder
+
+cd weather-app
+
+
+Install dependencies
+
+npm install
+
+
+Run the development server
+
+npm run dev
+
+
+Open your browser and go to: http://localhost:5173
+
+## 🧊 Styling & UI
+
+The app uses background images to reflect warm and cold weather.
+
+Responsive and clean layout.
+
+Weather details are centered for better visibility.
+
+.app {
+  background-image: url('./assets/cold-bg.jpg');
+}
+
+.app.warm {
+  background-image: url('./assets/warm-bg.jpg');
+}
+
+```
+📸 Sample UI
+---------------------------------
+|  🌤️  London, GB               |
+|  Tuesday 22 October 2025     |
+|                               |
+|           23°C               |
+|          Clear Sky           |
+---------------------------------
+```
+### ⚠️ Common Issues and Solution
+
+❌ Error: “API key is missing” → Ensure your key is correctly added in App.jsx.
+
+❌ Background not changing → Check if the temperature threshold and class names match (app and app warm).
+
+❌ No response from API → Confirm that the API endpoint is correct:
+
+https://api.openweathermap.org/data/2.5/
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+## 🙌 Acknowledgements
+
+OpenWeather API
+ for providing weather data
+
+React.js
+ for the frontend framework
+
+Vite
+ for fast development
+
+✅ Author: @kudostech
+
+💻 Portfolio: https://kudostech-portfolio-website.vercel.app
